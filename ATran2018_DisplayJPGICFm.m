@@ -1,0 +1,27 @@
+
+white = WhiteIndex(0);
+black = BlackIndex(0);
+grey = white / 2;
+inc = white - grey;
+[window, rect]=Screen('OpenWindow',0,white);
+theImage1 = imread('1.jpg');
+theImage2 = imread('2.jpg');
+theImage3 = imread('3.jpg');
+WaitSecs(0.5);
+imageTexture1 = Screen('MakeTexture', window, theImage1);
+Screen('DrawTexture', window, imageTexture1, [], [], 0);
+Screen('Flip',window);
+KbWait;
+WaitSecs(0.5);
+imshow('2.jpg.');
+imageTexture2 = Screen('MakeTexture', window, theImage2);
+Screen('DrawTexture', window, imageTexture2, [], [], 0);
+Screen('Flip',window);
+KbWait;
+WaitSecs(0.5);
+imageTexture3 = Screen('MakeTexture', window, theImage3);
+Screen('DrawTexture', window, imageTexture3, [], [], 0);
+Screen('Flip',window);
+KbWait;
+WaitSecs(0.5);
+sca;
